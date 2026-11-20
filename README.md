@@ -2,12 +2,27 @@
 
 Official website for **DigiHypeTech** — AI Automation, Voice Agents & Business Integration (`https://digihypetech.ca`).
 
-## Project Overview
+## Why GitHub Pages Needs Built Static Files (Not Uncompiled `src/main.tsx`)
 
-- **Business**: DigiHypeTech (Montreal, Quebec, Canada)
-- **Email**: hello@digihypetech.ca
-- **Phone**: (204) 800-0335
-- **Booking**: https://cal.com/digihypetech/30min
+This project is written in TypeScript + React + Tailwind CSS and compiles into pure static HTML/CSS/JS inside `dist/` (and `docs/`). GitHub Pages cannot execute uncompiled `.tsx` files directly from `/root`.
+
+## Deploying to GitHub Pages (Pick Any One Method)
+
+### Option 1 — Automatic Deployment via GitHub Actions (Recommended)
+This repository includes `.github/workflows/deploy.yml`.
+1. Push all files to the `main` branch on GitHub.
+2. Open **Repository Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. GitHub will automatically run `npm ci && npm run build` and publish `dist/` to `https://digihypetech.ca` (or your `github.io` URL).
+
+### Option 2 — Deploy from Branch (`/docs` folder, Zero Setup)
+If you prefer **Deploy from a branch** instead of GitHub Actions:
+1. Run `npm run build` (or use the included pre-built `docs/` folder).
+2. Open **Repository Settings → Pages**.
+3. Under **Build and deployment → Source**, choose **Deploy from a branch**, select branch `main` and folder **`/docs`**, and save.
+
+### Option 3 — Manual Static Upload
+Run `npm run build` locally and upload the contents of `dist/` (`index.html`, `assets/`, `CNAME`, `robots.txt`, `sitemap.xml`, `favicon.svg`) to your hosting branch or static host.
 
 ## Local Development
 
@@ -16,20 +31,6 @@ npm install
 npm run dev
 ```
 
-## Production Build & GitHub Pages Deployment
-
-1. Build the static production bundle:
-   ```bash
-   npm run build
-   ```
-   This outputs pure static files (`index.html`, `assets/`, `CNAME`, `robots.txt`, `sitemap.xml`) into the `dist/` directory with zero backend server requirements.
-
-2. Deploy `dist/` to GitHub Pages:
-   - Push the repository to GitHub (`digihypetech-website`).
-   - Either deploy the `dist/` folder via GitHub Actions (`actions/deploy-pages`) or configure GitHub Pages to serve from the `gh-pages` branch.
-   - `public/CNAME` is automatically copied into `dist/CNAME` with `digihypetech.ca`.
-   - Enable **Enforce HTTPS** in GitHub Repository Settings → Pages once DNS propagates.
-
 ## Contact Form Endpoint (Optional Upgrade)
 
-The enquiry form currently validates all fields in the browser, prepares a formatted email draft via `mailto:hello@digihypetech.ca`, and provides one-click copy-to-clipboard so enquiries are never silently dropped on a static host. To enable direct server-free HTTP submission via Formspree or Web3Forms, set `FORM_ENDPOINT` in `src/components/ContactSection.tsx`.
+The enquiry form validates all fields in the browser, prepares a formatted email draft via `mailto:hello@digihypetech.ca`, and provides one-click copy-to-clipboard so enquiries are never silently dropped on a static host. To enable direct HTTP submission via Formspree or Web3Forms, set `FORM_ENDPOINT` in `src/components/FinalCtaAndContact.tsx`.

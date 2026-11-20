@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ArrowRight,
   Briefcase,
@@ -10,6 +10,9 @@ import {
   Wrench,
 } from 'lucide-react';
 import { INDUSTRIES, SITE_CONFIG } from '../data/siteData';
+import hvacImg from '../assets/images/industry_hvac_operations_1795203647048.jpg';
+import clinicImg from '../assets/images/industry_clinic_reception_1795203647527.jpg';
+import legalImg from '../assets/images/industry_legal_office_1795203648104.jpg';
 
 const INDUSTRY_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   hvac: Wrench,
@@ -20,12 +23,32 @@ const INDUSTRY_ICONS: Record<string, React.ComponentType<{ className?: string }>
   professional: Briefcase,
 };
 
+const INDUSTRY_SHOWCASE = [
+  {
+    src: hvacImg,
+    alt: 'Canadian HVAC technician reviewing service dispatch details on a digital tablet',
+    caption: 'Field Services & Trades · Urgent dispatch and job address capture',
+  },
+  {
+    src: clinicImg,
+    alt: 'Modern Canadian dental and healthcare clinic reception area',
+    caption: 'Dental & Pharmacy · Calm, organized front-desk scheduling support',
+  },
+  {
+    src: legalImg,
+    alt: 'Contemporary Montreal law firm boardroom overlooking downtown',
+    caption: 'Law & Advisory · Structured client intake and consultation routing',
+  },
+];
+
 export const IndustriesSection: React.FC = () => {
+  const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
+
   return (
     <section id="industries" className="bg-white text-[#071426] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12 lg:mb-16">
+        <div className="max-w-2xl mb-12 lg:mb-14">
           <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#3987FF]">
             Industries We Support
           </p>
@@ -36,6 +59,34 @@ export const IndustriesSection: React.FC = () => {
             Different industries have different operational challenges. We build automation around
             the way your business actually works.
           </p>
+        </div>
+
+        {/* 3-Up Industry Visual Showcase */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          {INDUSTRY_SHOWCASE.map((item, idx) => (
+            <figure
+              key={item.caption}
+              className="rounded-xl overflow-hidden border border-[#DCE5EF] bg-[#F4F7FB] aspect-[4/3] relative"
+            >
+              {!failedImages[idx] ? (
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  onError={() => setFailedImages((prev) => ({ ...prev, [idx]: true }))}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-[#0B1930] text-slate-300 text-xs px-4 text-center">
+                  {item.caption}
+                </div>
+              )}
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071426]/90 via-[#071426]/50 to-transparent px-4 py-3 text-xs font-medium text-white">
+                {item.caption}
+              </figcaption>
+            </figure>
+          ))}
         </div>
 
         {/* 6 Industry Cards */}

@@ -1,23 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowUpRight, Check, Network, Workflow } from 'lucide-react';
 import { CORE_SOLUTIONS } from '../data/siteData';
+import studioImg from '../assets/images/solutions_automation_studio_1795203647288.jpg';
 
 export const SolutionsSection: React.FC = () => {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <section id="solutions" className="bg-[#F4F7FB] text-[#071426] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="max-w-2xl mb-12 lg:mb-16">
-          <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#3987FF]">
-            What We Do
-          </p>
-          <h2 className="mt-3 font-display font-extrabold text-3xl sm:text-4xl tracking-tight text-[#071426] [text-wrap:balance]">
-            Technology That Takes Work Off Your Team.
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#526174] leading-relaxed">
-            We design intelligent automation systems that reduce repetitive work, improve customer
-            communication, and connect the software your business already relies on.
-          </p>
+        {/* Section Header + Engineering Studio Visual */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
+          <div className="lg:col-span-6">
+            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#3987FF]">
+              What We Do
+            </p>
+            <h2 className="mt-3 font-display font-extrabold text-3xl sm:text-4xl tracking-tight text-[#071426] [text-wrap:balance]">
+              Technology That Takes Work Off Your Team.
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-[#526174] leading-relaxed">
+              We design intelligent automation systems that reduce repetitive work, improve customer
+              communication, and connect the software your business already relies on.
+            </p>
+          </div>
+
+          <div className="lg:col-span-6">
+            <figure className="rounded-xl overflow-hidden border border-[#DCE5EF] bg-[#0B1930] aspect-video relative">
+              {!imgError ? (
+                <img
+                  src={studioImg}
+                  alt="DigiHypeTech automation engineers collaborating in Montreal"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  onError={() => setImgError(true)}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#071426] to-[#10243D] text-slate-300 text-sm font-medium">
+                  Practical AI Automation &amp; Systems Architecture · Montreal
+                </div>
+              )}
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071426]/85 via-[#071426]/40 to-transparent px-5 py-3.5 text-xs font-medium text-slate-100">
+                Practical AI architecture &amp; workflow engineering · Montreal, QC
+              </figcaption>
+            </figure>
+          </div>
         </div>
 
         {/* Two Core Service Pillars */}

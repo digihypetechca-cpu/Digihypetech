@@ -8,6 +8,7 @@ import {
   UserCheck,
 } from 'lucide-react';
 import { SITE_CONFIG, TRUST_STRIP_ITEMS } from '../data/siteData';
+import heroNetworkImg from '../assets/images/hero_ai_network_1795203645785.jpg';
 
 type WorkflowStage = 'call' | 'qualify' | 'crm' | 'booked';
 
@@ -67,15 +68,22 @@ export const HeroSection: React.FC = () => {
       id="home"
       className="relative bg-[#071426] text-white overflow-hidden pt-24 lg:pt-32"
     >
-      {/* Subtle atmospheric electric blue & cyan radial lighting */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(65% 55% at 78% 22%, rgba(57, 135, 255, 0.16) 0%, rgba(50, 213, 232, 0.06) 45%, rgba(7, 20, 38, 0) 100%)',
-        }}
-      />
+      {/* Architectural optical glass refraction backdrop + measured contrast scrim */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <img
+          src={heroNetworkImg}
+          alt=""
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover opacity-35"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(95deg, rgba(7, 20, 38, 0.94) 0%, rgba(7, 20, 38, 0.82) 50%, rgba(7, 20, 38, 0.68) 100%)',
+          }}
+        />
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">

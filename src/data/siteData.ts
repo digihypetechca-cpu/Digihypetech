@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   phoneHref: 'tel:+12048000335',
   location: 'Montreal, Quebec, Canada',
   calBookingUrl: 'https://cal.com/digihypetech/30min',
-  logoPath: '/assets/aistudio/logo1_0309e7f3.jpg',
+  logoPath: './assets/aistudio/logo1_0309e7f3.jpg',
 };
 
 export interface VoiceScenario {

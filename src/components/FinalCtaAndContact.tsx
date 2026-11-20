@@ -10,6 +10,7 @@ import {
   Send,
 } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteData';
+import ctaNetworkImg from '../assets/images/hero_ai_network_1795203645785.jpg';
 
 // Optional: Configure a static form endpoint (e.g. Formspree / Web3Forms) to enable direct HTTP POST.
 // When empty, the form validates inputs and prepares a pre-filled email draft + clipboard copy.
@@ -141,14 +142,22 @@ export const FinalCtaAndContact: React.FC = () => {
     <>
       {/* 13. Final Call-to-Action */}
       <section className="relative bg-[#071426] text-white py-20 lg:py-24 overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(60% 70% at 50% 50%, rgba(57, 135, 255, 0.16) 0%, rgba(50, 213, 232, 0.06) 45%, rgba(7, 20, 38, 0) 100%)',
-          }}
-        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          <img
+            src={ctaNetworkImg}
+            alt=""
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover opacity-25"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(70% 80% at 50% 50%, rgba(7, 20, 38, 0.68) 0%, rgba(7, 20, 38, 0.95) 100%)',
+            }}
+          />
+        </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#32D5E8]">
             Get Started
