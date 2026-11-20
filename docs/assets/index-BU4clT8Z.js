@@ -12227,7 +12227,8 @@ var SITE_CONFIG = {
 	phoneHref: "tel:+12048000335",
 	location: "Montreal, Quebec, Canada",
 	calBookingUrl: "https://cal.com/digihypetech/30min",
-	logoPath: "./assets/aistudio/logo1_0309e7f3.jpg"
+	logoPath: "./assets/aistudio/logo_emblem.png",
+	fullLogoPath: "./assets/aistudio/logo_full.png"
 };
 var VOICE_SCENARIOS = [
 	{
@@ -12528,74 +12529,54 @@ var PROCESS_STEPS = [
 ];
 var INTEGRATIONS = [
 	{
+		id: "retell",
 		name: "Retell AI",
-		category: "Voice & Telephony",
-		abbr: "RT"
+		category: "Voice & Telephony"
 	},
 	{
+		id: "twilio",
 		name: "Twilio",
-		category: "Voice & Telephony",
-		abbr: "TW"
+		category: "Voice & Telephony"
 	},
 	{
+		id: "elevenlabs",
 		name: "ElevenLabs",
-		category: "Voice & Telephony",
-		abbr: "11"
+		category: "Voice & Telephony"
 	},
 	{
+		id: "n8n",
 		name: "n8n",
-		category: "Automation & Data",
-		abbr: "n8n"
+		category: "Automation & Data"
 	},
 	{
+		id: "make",
 		name: "Make",
-		category: "Automation & Data",
-		abbr: "MK"
+		category: "Automation & Data"
 	},
 	{
+		id: "zapier",
 		name: "Zapier",
-		category: "Automation & Data",
-		abbr: "ZP"
+		category: "Automation & Data"
 	},
 	{
-		name: "Airtable",
-		category: "Automation & Data",
-		abbr: "AT"
-	},
-	{
+		id: "hubspot",
 		name: "HubSpot",
-		category: "CRM & Scheduling",
-		abbr: "HS"
+		category: "CRM & Scheduling"
 	},
 	{
+		id: "gohighlevel",
 		name: "GoHighLevel",
-		category: "CRM & Scheduling",
-		abbr: "GHL"
+		category: "CRM & Scheduling"
 	},
 	{
+		id: "salesforce",
 		name: "Salesforce",
-		category: "CRM & Scheduling",
-		abbr: "SF"
+		category: "CRM & Scheduling"
 	},
 	{
-		name: "Pipedrive",
-		category: "CRM & Scheduling",
-		abbr: "PD"
-	},
-	{
-		name: "Cal.com",
-		category: "CRM & Scheduling",
-		abbr: "CAL"
-	},
-	{
+		id: "gcal",
 		name: "Google Calendar",
-		category: "CRM & Scheduling",
-		abbr: "GC"
-	},
-	{
-		name: "Microsoft Outlook",
-		category: "CRM & Scheduling",
-		abbr: "MO"
+		category: "CRM & Scheduling"
 	}
 ];
 var WHY_CHOOSE_ITEMS = [
@@ -12734,20 +12715,23 @@ var Navbar = () => {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 					href: "#home",
 					onClick: () => setMobileOpen(false),
-					className: "inline-flex items-center gap-2.5 text-white font-display font-bold text-lg tracking-tight whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#32D5E8] rounded",
+					className: "inline-flex items-center gap-3 text-white font-display font-bold text-xl tracking-tight whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#32D5E8] rounded",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "w-8 h-8 rounded-md bg-white overflow-hidden inline-flex items-center justify-center shrink-0 border border-white/20",
+						className: "h-10 w-14 rounded-lg bg-white px-1.5 py-1 inline-flex items-center justify-center shrink-0 shadow-sm ring-1 ring-white/25",
 						children: !logoError ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 							src: SITE_CONFIG.logoPath,
 							alt: "DigiHypeTech brand emblem",
 							referrerPolicy: "no-referrer",
 							onError: () => setLogoError(true),
-							className: "w-full h-full object-cover object-[50%_18%] scale-125"
+							className: "w-full h-full object-contain"
 						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-[#071426] font-display font-extrabold text-sm",
-							children: "D"
+							children: "DH"
 						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "DigiHypeTech" })]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["DigiHype", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-[#32D5E8]",
+						children: "Tech"
+					})] })]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
 					"aria-label": "Primary navigation",
@@ -13741,6 +13725,345 @@ var CATEGORIES = [
 	"Automation & Data",
 	"CRM & Scheduling"
 ];
+var IntegrationBrandLogo = ({ id, name }) => {
+	switch (id) {
+		case "retell": return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					width: "40",
+					height: "40",
+					rx: "9",
+					fill: "#0F172A"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M12 28V12h8.5c3.6 0 6 2 6 5.2 0 2.5-1.5 4.2-3.9 4.8L27.5 28h-4.4l-4.2-5.4h-3V28H12zm3.9-8.6h4.2c1.6 0 2.5-.8 2.5-2.1s-.9-2.1-2.5-2.1h-4.2v4.2z",
+					fill: "#FFFFFF"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "30",
+					cy: "13",
+					r: "3",
+					fill: "#32D5E8"
+				})
+			]
+		});
+		case "twilio": return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "20",
+					cy: "20",
+					r: "16",
+					fill: "none",
+					stroke: "#F22F46",
+					strokeWidth: "3.5"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "15.2",
+					cy: "15.2",
+					r: "2.7",
+					fill: "#F22F46"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "24.8",
+					cy: "15.2",
+					r: "2.7",
+					fill: "#F22F46"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "15.2",
+					cy: "24.8",
+					r: "2.7",
+					fill: "#F22F46"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "24.8",
+					cy: "24.8",
+					r: "2.7",
+					fill: "#F22F46"
+				})
+			]
+		});
+		case "elevenlabs": return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					width: "40",
+					height: "40",
+					rx: "9",
+					fill: "#111827"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "13",
+					y: "10",
+					width: "4.5",
+					height: "20",
+					rx: "1",
+					fill: "#FFFFFF"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "22.5",
+					y: "10",
+					width: "4.5",
+					height: "20",
+					rx: "1",
+					fill: "#FFFFFF"
+				})
+			]
+		});
+		case "n8n": return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M11 20h7m0 0l5.5-7h5.5m-11 7l5.5 7h5.5",
+					stroke: "#EA4B71",
+					strokeWidth: "2.6",
+					strokeLinecap: "round",
+					strokeLinejoin: "round",
+					fill: "none"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "9",
+					cy: "20",
+					r: "3.4",
+					fill: "#EA4B71"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "18",
+					cy: "20",
+					r: "3.4",
+					fill: "#EA4B71"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "30",
+					cy: "13",
+					r: "3.4",
+					fill: "#EA4B71"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "30",
+					cy: "27",
+					r: "3.4",
+					fill: "#EA4B71"
+				})
+			]
+		});
+		case "make": return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "7",
+					y: "11",
+					width: "6",
+					height: "19",
+					rx: "1.8",
+					transform: "rotate(-14 10 20.5)",
+					fill: "#C084FC"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "17",
+					y: "10",
+					width: "6",
+					height: "20",
+					rx: "1.8",
+					transform: "rotate(-6 20 20)",
+					fill: "#9333EA"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "27",
+					y: "10",
+					width: "6",
+					height: "20",
+					rx: "1.8",
+					fill: "#6D28D9"
+				})
+			]
+		});
+		case "zapier": return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+				stroke: "#FF4F00",
+				strokeWidth: "3.2",
+				strokeLinecap: "round",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+						x1: "20",
+						y1: "6",
+						x2: "20",
+						y2: "15"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+						x1: "20",
+						y1: "25",
+						x2: "20",
+						y2: "34"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+						x1: "6",
+						y1: "20",
+						x2: "15",
+						y2: "20"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+						x1: "25",
+						y1: "20",
+						x2: "34",
+						y2: "20"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+						x1: "10.1",
+						y1: "10.1",
+						x2: "16.5",
+						y2: "16.5"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+						x1: "23.5",
+						y1: "23.5",
+						x2: "29.9",
+						y2: "29.9"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+						x1: "29.9",
+						y1: "10.1",
+						x2: "23.5",
+						y2: "16.5"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+						x1: "16.5",
+						y1: "23.5",
+						x2: "10.1",
+						y2: "29.9"
+					})
+				]
+			})
+		});
+		case "hubspot": return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M24 14.5V9.5m0 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5zm-9 8.5l-5.5-3.2m0 0a2.2 2.2 0 10-3-3.2 2.2 2.2 0 003 3.2zm14.5 9.5l5.2 3",
+					stroke: "#FF7A59",
+					strokeWidth: "2.6",
+					strokeLinecap: "round",
+					fill: "none"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "24",
+					cy: "22",
+					r: "6.2",
+					fill: "none",
+					stroke: "#FF7A59",
+					strokeWidth: "3.2"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "14",
+					cy: "14",
+					r: "2.8",
+					fill: "#FF7A59"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "24",
+					cy: "8.5",
+					r: "2.6",
+					fill: "#FF7A59"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "31.5",
+					cy: "29.5",
+					r: "2.6",
+					fill: "#FF7A59"
+				})
+			]
+		});
+		case "gohighlevel": return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M9 28V19l4-4v13H9z",
+					fill: "#3987FF"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M17.5 28V14l4-4v18h-4z",
+					fill: "#32D5E8"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M26 28V10l4-4v22h-4z",
+					fill: "#22C55E"
+				})
+			]
+		});
+		case "salesforce": return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+				d: "M16.5 13.5c1.5-2.1 4-3.5 6.8-3.5 4.2 0 7.7 3.1 8.3 7.1 2.7.8 4.7 3.3 4.7 6.2 0 3.6-2.9 6.5-6.5 6.5H11.5C7.9 29.8 5 26.9 5 23.3c0-3.2 2.3-5.9 5.3-6.4.6-2.7 3-4.7 5.9-4.7.1 0 .2.6.3 1.3z",
+				fill: "#00A1E0"
+			})
+		});
+		case "gcal": return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 40 40",
+			className: "w-8 h-8",
+			"aria-label": `${name} logo`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "7",
+					y: "7",
+					width: "26",
+					height: "26",
+					rx: "4",
+					fill: "#FFFFFF"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M7 11a4 4 0 014-4h18a4 4 0 014 4v4H7v-4z",
+					fill: "#4285F4"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M27 33h2a4 4 0 004-4v-2h-6v6z",
+					fill: "#EA4335"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M7 27v2a4 4 0 004 4h2v-6H7z",
+					fill: "#34A853"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "13",
+					y: "27",
+					width: "14",
+					height: "6",
+					fill: "#FBBC05"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+					x: "20",
+					y: "24.5",
+					textAnchor: "middle",
+					fontSize: "10.5",
+					fontWeight: "700",
+					fontFamily: "Inter, sans-serif",
+					fill: "#1F2937",
+					children: "31"
+				})
+			]
+		});
+	}
+};
 var IntegrationsSection = () => {
 	const [filter, setFilter] = (0, import_react.useState)("All");
 	const filteredPlatforms = filter === "All" ? INTEGRATIONS : INTEGRATIONS.filter((item) => item.category === filter);
@@ -13786,24 +14109,30 @@ var IntegrationsSection = () => {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4",
+					className: "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4",
 					children: filteredPlatforms.map((platform) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "rounded-xl bg-[#0B1930] border border-white/10 p-4 flex flex-col justify-between gap-3 transition-colors duration-200 hover:border-[#32D5E8]/45 hover:bg-[#10243D]",
+						className: "rounded-xl bg-[#0B1930] border border-white/10 p-5 flex items-center gap-3.5 transition-colors duration-200 hover:border-[#32D5E8]/45 hover:bg-[#10243D]",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "w-10 h-10 rounded-lg bg-[#071426] border border-white/10 flex items-center justify-center font-mono-tabular text-xs font-semibold text-[#32D5E8]",
-							children: platform.abbr
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-display font-bold text-sm text-white leading-snug",
-							children: platform.name
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-1 text-[11px] text-slate-400",
-							children: platform.category
-						})] })]
-					}, platform.name))
+							className: "w-11 h-11 rounded-lg bg-[#071426] border border-white/10 flex items-center justify-center shrink-0",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(IntegrationBrandLogo, {
+								id: platform.id,
+								name: platform.name
+							})
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "min-w-0",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "font-display font-bold text-sm text-white leading-snug truncate",
+								children: platform.name
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-0.5 text-[11px] text-slate-400 truncate",
+								children: platform.category
+							})]
+						})]
+					}, platform.id))
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs sm:text-sm text-slate-400",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Supported technology examples shown above reflect platforms DigiHypeTech works with; specific integrations are scoped and verified per client environment." }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Also compatible with Airtable, Pipedrive, Cal.com, and Microsoft Outlook — specific integrations are scoped and verified per client environment." }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 						href: "#contact",
 						className: "text-[#32D5E8] hover:text-white font-semibold transition-colors whitespace-nowrap shrink-0",
 						children: "Not seeing your software? Ask about custom API connections →"
@@ -14670,22 +14999,25 @@ var Footer = () => {
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "md:col-span-5 space-y-4",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 							href: "#home",
-							className: "inline-flex items-center gap-2.5 text-white font-display font-bold text-lg tracking-tight",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "w-8 h-8 rounded-md bg-white overflow-hidden inline-flex items-center justify-center shrink-0 border border-white/20",
-								children: !logoError ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									src: SITE_CONFIG.logoPath,
-									alt: "DigiHypeTech logo",
+							className: "inline-flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#32D5E8] rounded-xl",
+							children: !logoError ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "bg-white rounded-xl p-3 inline-flex items-center justify-center shadow-md ring-1 ring-white/15",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: SITE_CONFIG.fullLogoPath,
+									alt: "DigiHypeTech — AI Automation Service Provider",
 									referrerPolicy: "no-referrer",
 									onError: () => setLogoError(true),
-									className: "w-full h-full object-cover object-[50%_18%] scale-125"
-								}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-[#071426] font-display font-extrabold text-sm",
-									children: "D"
+									className: "w-40 sm:w-44 h-auto object-contain"
 								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "DigiHypeTech" })]
+							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+								className: "text-white font-display font-bold text-xl tracking-tight",
+								children: ["DigiHype", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[#32D5E8]",
+									children: "Tech"
+								})]
+							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "text-sm text-slate-400 leading-relaxed max-w-sm",
 							children: "We build and maintain intelligent AI automation and integrations that take repetitive work off your team and connect the systems your business already uses."

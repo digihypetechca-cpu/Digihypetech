@@ -47,22 +47,24 @@ export const Navbar: React.FC = () => {
         <a
           href="#home"
           onClick={() => setMobileOpen(false)}
-          className="inline-flex items-center gap-2.5 text-white font-display font-bold text-lg tracking-tight whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#32D5E8] rounded"
+          className="inline-flex items-center gap-3 text-white font-display font-bold text-xl tracking-tight whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#32D5E8] rounded"
         >
-          <span className="w-8 h-8 rounded-md bg-white overflow-hidden inline-flex items-center justify-center shrink-0 border border-white/20">
+          <span className="h-10 w-14 rounded-lg bg-white px-1.5 py-1 inline-flex items-center justify-center shrink-0 shadow-sm ring-1 ring-white/25">
             {!logoError ? (
               <img
                 src={SITE_CONFIG.logoPath}
                 alt="DigiHypeTech brand emblem"
                 referrerPolicy="no-referrer"
                 onError={() => setLogoError(true)}
-                className="w-full h-full object-cover object-[50%_18%] scale-125"
+                className="w-full h-full object-contain"
               />
             ) : (
-              <span className="text-[#071426] font-display font-extrabold text-sm">D</span>
+              <span className="text-[#071426] font-display font-extrabold text-sm">DH</span>
             )}
           </span>
-          <span>DigiHypeTech</span>
+          <span>
+            DigiHype<span className="text-[#32D5E8]">Tech</span>
+          </span>
         </a>
 
         {/* Zone 2: Desktop Single-Line Navigation */}

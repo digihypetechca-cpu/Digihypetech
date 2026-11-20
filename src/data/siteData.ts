@@ -5,7 +5,8 @@ export const SITE_CONFIG = {
   phoneHref: 'tel:+12048000335',
   location: 'Montreal, Quebec, Canada',
   calBookingUrl: 'https://cal.com/digihypetech/30min',
-  logoPath: './assets/aistudio/logo1_0309e7f3.jpg',
+  logoPath: './assets/aistudio/logo_emblem.png',
+  fullLogoPath: './assets/aistudio/logo_full.png',
 };
 
 export interface VoiceScenario {
@@ -347,27 +348,35 @@ export const PROCESS_STEPS = [
   },
 ];
 
+export type IntegrationId =
+  | 'retell'
+  | 'twilio'
+  | 'elevenlabs'
+  | 'n8n'
+  | 'make'
+  | 'zapier'
+  | 'hubspot'
+  | 'gohighlevel'
+  | 'salesforce'
+  | 'gcal';
+
 export interface IntegrationPlatform {
+  id: IntegrationId;
   name: string;
   category: 'Voice & Telephony' | 'Automation & Data' | 'CRM & Scheduling';
-  abbr: string;
 }
 
 export const INTEGRATIONS: IntegrationPlatform[] = [
-  { name: 'Retell AI', category: 'Voice & Telephony', abbr: 'RT' },
-  { name: 'Twilio', category: 'Voice & Telephony', abbr: 'TW' },
-  { name: 'ElevenLabs', category: 'Voice & Telephony', abbr: '11' },
-  { name: 'n8n', category: 'Automation & Data', abbr: 'n8n' },
-  { name: 'Make', category: 'Automation & Data', abbr: 'MK' },
-  { name: 'Zapier', category: 'Automation & Data', abbr: 'ZP' },
-  { name: 'Airtable', category: 'Automation & Data', abbr: 'AT' },
-  { name: 'HubSpot', category: 'CRM & Scheduling', abbr: 'HS' },
-  { name: 'GoHighLevel', category: 'CRM & Scheduling', abbr: 'GHL' },
-  { name: 'Salesforce', category: 'CRM & Scheduling', abbr: 'SF' },
-  { name: 'Pipedrive', category: 'CRM & Scheduling', abbr: 'PD' },
-  { name: 'Cal.com', category: 'CRM & Scheduling', abbr: 'CAL' },
-  { name: 'Google Calendar', category: 'CRM & Scheduling', abbr: 'GC' },
-  { name: 'Microsoft Outlook', category: 'CRM & Scheduling', abbr: 'MO' },
+  { id: 'retell', name: 'Retell AI', category: 'Voice & Telephony' },
+  { id: 'twilio', name: 'Twilio', category: 'Voice & Telephony' },
+  { id: 'elevenlabs', name: 'ElevenLabs', category: 'Voice & Telephony' },
+  { id: 'n8n', name: 'n8n', category: 'Automation & Data' },
+  { id: 'make', name: 'Make', category: 'Automation & Data' },
+  { id: 'zapier', name: 'Zapier', category: 'Automation & Data' },
+  { id: 'hubspot', name: 'HubSpot', category: 'CRM & Scheduling' },
+  { id: 'gohighlevel', name: 'GoHighLevel', category: 'CRM & Scheduling' },
+  { id: 'salesforce', name: 'Salesforce', category: 'CRM & Scheduling' },
+  { id: 'gcal', name: 'Google Calendar', category: 'CRM & Scheduling' },
 ];
 
 export const WHY_CHOOSE_ITEMS = [

@@ -12,22 +12,23 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-5 space-y-4">
             <a
               href="#home"
-              className="inline-flex items-center gap-2.5 text-white font-display font-bold text-lg tracking-tight"
+              className="inline-flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#32D5E8] rounded-xl"
             >
-              <span className="w-8 h-8 rounded-md bg-white overflow-hidden inline-flex items-center justify-center shrink-0 border border-white/20">
-                {!logoError ? (
+              {!logoError ? (
+                <span className="bg-white rounded-xl p-3 inline-flex items-center justify-center shadow-md ring-1 ring-white/15">
                   <img
-                    src={SITE_CONFIG.logoPath}
-                    alt="DigiHypeTech logo"
+                    src={SITE_CONFIG.fullLogoPath}
+                    alt="DigiHypeTech — AI Automation Service Provider"
                     referrerPolicy="no-referrer"
                     onError={() => setLogoError(true)}
-                    className="w-full h-full object-cover object-[50%_18%] scale-125"
+                    className="w-40 sm:w-44 h-auto object-contain"
                   />
-                ) : (
-                  <span className="text-[#071426] font-display font-extrabold text-sm">D</span>
-                )}
-              </span>
-              <span>DigiHypeTech</span>
+                </span>
+              ) : (
+                <span className="text-white font-display font-bold text-xl tracking-tight">
+                  DigiHype<span className="text-[#32D5E8]">Tech</span>
+                </span>
+              )}
             </a>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
