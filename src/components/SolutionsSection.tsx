@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Check, Network, Workflow } from 'lucide-react';
 import { CORE_SOLUTIONS } from '../data/siteData';
-import studioImg from '../assets/images/solutions_automation_studio_1795203647288.jpg';
+import studioImg from '../assets/images/real_engineering_workspace_1795204156762.jpg';
 
 export const SolutionsSection: React.FC = () => {
   const [imgError, setImgError] = useState(false);

@@ -10,7 +10,7 @@ import {
   Send,
 } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteData';
-import ctaNetworkImg from '../assets/images/hero_ai_network_1795203645785.jpg';
+import ctaNetworkImg from '../assets/images/real_montreal_twilight_1795204156374.jpg';
 
 // Optional: Configure a static form endpoint (e.g. Formspree / Web3Forms) to enable direct HTTP POST.
 // When empty, the form validates inputs and prepares a pre-filled email draft + clipboard copy.

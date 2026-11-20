@@ -8,7 +8,7 @@ import {
   UserCheck,
 } from 'lucide-react';
 import { SITE_CONFIG, TRUST_STRIP_ITEMS } from '../data/siteData';
-import heroNetworkImg from '../assets/images/hero_ai_network_1795203645785.jpg';
+import heroNetworkImg from '../assets/images/real_montreal_twilight_1795204156374.jpg';
 
 type WorkflowStage = 'call' | 'qualify' | 'crm' | 'booked';
 

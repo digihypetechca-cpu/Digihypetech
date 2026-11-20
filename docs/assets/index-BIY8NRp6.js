@@ -12800,8 +12800,8 @@ var Navbar = () => {
 		})]
 	});
 };
-// src/assets/images/hero_ai_network_1795203645785.jpg
-var hero_ai_network_1795203645785_default = new URL("hero_ai_network_1795203645785-DddLh4PE.jpg", import.meta.url).href;
+// src/assets/images/real_montreal_twilight_1795204156374.jpg
+var real_montreal_twilight_1795204156374_default = new URL("real_montreal_twilight_1795204156374-D2nIzb5C.jpg", import.meta.url).href;
 // src/components/HeroSection.tsx
 var STAGE_CONTENT = {
 	call: {
@@ -12866,7 +12866,7 @@ var HeroSection = () => {
 				"aria-hidden": "true",
 				className: "pointer-events-none absolute inset-0 overflow-hidden",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: hero_ai_network_1795203645785_default,
+					src: real_montreal_twilight_1795204156374_default,
 					alt: "",
 					referrerPolicy: "no-referrer",
 					className: "w-full h-full object-cover opacity-35"
@@ -13102,8 +13102,8 @@ var HeroSection = () => {
 		]
 	});
 };
-// src/assets/images/solutions_automation_studio_1795203647288.jpg
-var solutions_automation_studio_1795203647288_default = new URL("solutions_automation_studio_1795203647288-BtIjsgCD.jpg", import.meta.url).href;
+// src/assets/images/real_engineering_workspace_1795204156762.jpg
+var real_engineering_workspace_1795204156762_default = new URL("real_engineering_workspace_1795204156762-03Vo5EEw.jpg", import.meta.url).href;
 // src/components/SolutionsSection.tsx
 var SolutionsSection = () => {
 	const [imgError, setImgError] = (0, import_react.useState)(false);
@@ -13135,7 +13135,7 @@ var SolutionsSection = () => {
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
 						className: "rounded-xl overflow-hidden border border-[#DCE5EF] bg-[#0B1930] aspect-video relative",
 						children: [!imgError ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: solutions_automation_studio_1795203647288_default,
+							src: real_engineering_workspace_1795204156762_default,
 							alt: "DigiHypeTech automation engineers collaborating in Montreal",
 							loading: "lazy",
 							referrerPolicy: "no-referrer",
@@ -13521,12 +13521,12 @@ var VoiceAgentsSection = () => {
 		})
 	});
 };
-// src/assets/images/industry_hvac_operations_1795203647048.jpg
-var industry_hvac_operations_1795203647048_default = new URL("industry_hvac_operations_1795203647048-BHhvq06N.jpg", import.meta.url).href;
-// src/assets/images/industry_clinic_reception_1795203647527.jpg
-var industry_clinic_reception_1795203647527_default = new URL("industry_clinic_reception_1795203647527-DfPdICUs.jpg", import.meta.url).href;
-// src/assets/images/industry_legal_office_1795203648104.jpg
-var industry_legal_office_1795203648104_default = new URL("industry_legal_office_1795203648104-DJf0vqPU.jpg", import.meta.url).href;
+// src/assets/images/real_hvac_technician_1795204155479.jpg
+var real_hvac_technician_1795204155479_default = new URL("real_hvac_technician_1795204155479-PdrVDCIp.jpg", import.meta.url).href;
+// src/assets/images/real_clinic_interior_1795204155442.jpg
+var real_clinic_interior_1795204155442_default = new URL("real_clinic_interior_1795204155442-cWLjjaVv.jpg", import.meta.url).href;
+// src/assets/images/real_advisory_office_1795204155632.jpg
+var real_advisory_office_1795204155632_default = new URL("real_advisory_office_1795204155632-Dy1vD33A.jpg", import.meta.url).href;
 // src/components/IndustriesSection.tsx
 var INDUSTRY_ICONS = {
 	hvac: Wrench,
@@ -13538,17 +13538,17 @@ var INDUSTRY_ICONS = {
 };
 var INDUSTRY_SHOWCASE = [
 	{
-		src: industry_hvac_operations_1795203647048_default,
+		src: real_hvac_technician_1795204155479_default,
 		alt: "Canadian HVAC technician reviewing service dispatch details on a digital tablet",
 		caption: "Field Services & Trades · Urgent dispatch and job address capture"
 	},
 	{
-		src: industry_clinic_reception_1795203647527_default,
+		src: real_clinic_interior_1795204155442_default,
 		alt: "Modern Canadian dental and healthcare clinic reception area",
 		caption: "Dental & Pharmacy · Calm, organized front-desk scheduling support"
 	},
 	{
-		src: industry_legal_office_1795203648104_default,
+		src: real_advisory_office_1795204155632_default,
 		alt: "Contemporary Montreal law firm boardroom overlooking downtown",
 		caption: "Law & Advisory · Structured client intake and consultation routing"
 	}
@@ -14218,7 +14218,7 @@ var FinalCtaAndContact = () => {
 			"aria-hidden": "true",
 			className: "pointer-events-none absolute inset-0 overflow-hidden",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-				src: hero_ai_network_1795203645785_default,
+				src: real_montreal_twilight_1795204156374_default,
 				alt: "",
 				loading: "lazy",
 				referrerPolicy: "no-referrer",

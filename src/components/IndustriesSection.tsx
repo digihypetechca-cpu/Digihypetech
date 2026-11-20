@@ -10,9 +10,9 @@ import {
   Wrench,
 } from 'lucide-react';
 import { INDUSTRIES, SITE_CONFIG } from '../data/siteData';
-import hvacImg from '../assets/images/industry_hvac_operations_1795203647048.jpg';
-import clinicImg from '../assets/images/industry_clinic_reception_1795203647527.jpg';
-import legalImg from '../assets/images/industry_legal_office_1795203648104.jpg';
+import hvacImg from '../assets/images/real_hvac_technician_1795204155479.jpg';
+import clinicImg from '../assets/images/real_clinic_interior_1795204155442.jpg';
+import legalImg from '../assets/images/real_advisory_office_1795204155632.jpg';
 
 const INDUSTRY_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   hvac: Wrench,
