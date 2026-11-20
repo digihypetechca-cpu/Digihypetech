@@ -1,0 +1,8 @@
+{
+  "name": "DigiHypeTech",
+  "description": "DigiHypeTech builds AI voice agents, business automation, and software integrations that help Canadian businesses streamline operations and capture more opportunities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
