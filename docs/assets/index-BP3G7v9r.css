@@ -2,9 +2,6 @@
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
@@ -738,6 +735,10 @@
     width: calc(var(--spacing) * 14);
   }
 
+  .w-28 {
+    width: calc(var(--spacing) * 28);
+  }
+
   .w-40 {
     width: calc(var(--spacing) * 40);
   }
@@ -784,13 +785,6 @@
 
   .grow {
     flex-grow: 1;
-  }
-
-  .scale-125 {
-    --tw-scale-x: 125%;
-    --tw-scale-y: 125%;
-    --tw-scale-z: 125%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
 
   .rotate-180 {
@@ -1136,16 +1130,6 @@
     }
   }
 
-  .border-white\/20 {
-    border-color: #fff3;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .border-white\/20 {
-      border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
-    }
-  }
-
   .bg-\[\#0B1930\] {
     background-color: #0b1930;
   }
@@ -1291,10 +1275,6 @@
 
   .object-cover {
     object-fit: cover;
-  }
-
-  .object-\[50\%_18\%\] {
-    object-position: 50% 18%;
   }
 
   .p-1 {
@@ -1803,6 +1783,10 @@
       }
     }
 
+    .hover\:text-\[\#32D5E8\]:hover {
+      color: #32d5e8;
+    }
+
     .hover\:text-\[\#2563EB\]:hover {
       color: #2563eb;
     }
@@ -1929,6 +1913,10 @@
       display: inline-flex;
     }
 
+    .sm\:w-32 {
+      width: calc(var(--spacing) * 32);
+    }
+
     .sm\:w-44 {
       width: calc(var(--spacing) * 44);
     }
@@ -2047,10 +2035,6 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .md\:grid-cols-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
     .md\:grid-cols-12 {
       grid-template-columns: repeat(12, minmax(0, 1fr));
     }
@@ -2138,10 +2122,6 @@
 
     .lg\:grid-cols-5 {
       grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-
-    .lg\:grid-cols-7 {
-      grid-template-columns: repeat(7, minmax(0, 1fr));
     }
 
     .lg\:grid-cols-12 {
@@ -2303,24 +2283,6 @@ input[type="range"].dht-slider::-moz-range-thumb {
   * {
     transition-duration: .01ms !important;
   }
-}
-
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }
 
 @property --tw-rotate-x {

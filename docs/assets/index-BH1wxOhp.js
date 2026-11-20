@@ -14991,7 +14991,7 @@ var FinalCtaAndContact = () => {
 var Footer = () => {
 	const [logoError, setLogoError] = (0, import_react.useState)(false);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
-		className: "bg-[#071426] text-slate-300 border-t border-white/10",
+		className: "bg-[#071426] text-white border-t border-white/10",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -15001,15 +15001,15 @@ var Footer = () => {
 						className: "md:col-span-5 space-y-4",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 							href: "#home",
-							className: "inline-flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#32D5E8] rounded-xl",
+							className: "inline-flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#32D5E8] rounded-lg",
 							children: !logoError ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "bg-white rounded-xl p-3 inline-flex items-center justify-center shadow-md ring-1 ring-white/15",
+								className: "bg-white rounded-lg p-2 inline-flex items-center justify-center shadow-sm ring-1 ring-white/15",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 									src: SITE_CONFIG.fullLogoPath,
 									alt: "DigiHypeTech — AI Automation Service Provider",
 									referrerPolicy: "no-referrer",
 									onError: () => setLogoError(true),
-									className: "w-40 sm:w-44 h-auto object-contain"
+									className: "w-28 sm:w-32 h-auto object-contain"
 								})
 							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 								className: "text-white font-display font-bold text-xl tracking-tight",
@@ -15019,41 +15019,41 @@ var Footer = () => {
 								})]
 							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-sm text-slate-400 leading-relaxed max-w-sm",
+							className: "text-sm text-slate-200 leading-relaxed max-w-sm",
 							children: "We build and maintain intelligent AI automation and integrations that take repetitive work off your team and connect the systems your business already uses."
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "md:col-span-2 space-y-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display font-bold text-xs tracking-[0.14em] uppercase text-white",
+							className: "font-display font-bold text-xs tracking-[0.14em] uppercase text-[#32D5E8]",
 							children: "Explore"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 							className: "space-y-2.5 text-sm",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#home",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "Home"
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#solutions",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "Solutions"
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#industries",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "Industries"
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#how-it-works",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "How It Works"
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#contact",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "Contact"
 								}) })
 							]
@@ -15062,29 +15062,29 @@ var Footer = () => {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "md:col-span-2 space-y-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display font-bold text-xs tracking-[0.14em] uppercase text-white",
+							className: "font-display font-bold text-xs tracking-[0.14em] uppercase text-[#32D5E8]",
 							children: "Solutions"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 							className: "space-y-2.5 text-sm",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#voice-agents",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "AI Voice Agents"
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#solutions",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "Workflow Automation"
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#integrations",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "AI Integration"
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: "#calculator",
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: "Missed-Call Calculator"
 								}) })
 							]
@@ -15093,23 +15093,23 @@ var Footer = () => {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "md:col-span-3 space-y-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-display font-bold text-xs tracking-[0.14em] uppercase text-white",
+							className: "font-display font-bold text-xs tracking-[0.14em] uppercase text-[#32D5E8]",
 							children: "Get in Touch"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 							className: "space-y-2.5 text-sm",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: `mailto:${SITE_CONFIG.email}`,
-									className: "hover:text-white transition-colors",
+									className: "text-white hover:text-[#32D5E8] transition-colors",
 									children: SITE_CONFIG.email
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 									href: SITE_CONFIG.phoneHref,
-									className: "font-mono-tabular hover:text-white transition-colors",
+									className: "font-mono-tabular text-white hover:text-[#32D5E8] transition-colors",
 									children: SITE_CONFIG.phoneDisplay
 								}) }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-									className: "text-slate-400",
+									className: "text-white",
 									children: SITE_CONFIG.location
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
@@ -15127,7 +15127,7 @@ var Footer = () => {
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500",
+				className: "mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Copyright © 2026 DigiHypeTech. All rights reserved." }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Montreal, Quebec, Canada" })]
 			})]
 		})
